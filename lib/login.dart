@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:tattoo_finder/cadastro.dart';
 import 'paginaPrincipal.dart';
 
-
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -25,19 +23,17 @@ class _MyHomePageState extends State<MyHomePage> {
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Container(
-                color: Color.fromARGB(255, 0, 0, 0),
-                child: const Center(
-                  child: Text(
-                    'Tattoo Finder',
-                    style: TextStyle(fontSize: 45, color: Colors.white),
-                  ),
+                height: 250,
+                color: Colors.black,
+                child: Center(
+                  child: Image.asset("assets/img/Finder.png"),
                 ),
               ),
             ),
             Expanded(
-              flex: 3,
+              flex: 2,
               child: Container(
                 decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 255, 255, 255),
@@ -97,11 +93,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         SizedBox(height: 18),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () { Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => paginaPrincipal(title: 'paginaPrincipal'),
-                            ),
-                          );},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      paginaPrincipal(title: 'paginaPrincipal'),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
@@ -131,11 +130,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Expanded(
                           child: TextButton(
-                            onPressed: () {  Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => CadastroPage(title: 'SignUp_Page'),
-                            ),
-                          );},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      CadastroPage(title: 'SignUp_Page'),
+                                ),
+                              );
+                            },
                             child: Text(
                               'Cadastre-se',
                               style: TextStyle(

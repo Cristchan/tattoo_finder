@@ -2,8 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tattoo_finder/login.dart';
 
-
-
 class paginaPrincipal extends StatefulWidget {
   const paginaPrincipal({Key? key, required this.title}) : super(key: key);
 
@@ -13,24 +11,28 @@ class paginaPrincipal extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<paginaPrincipal> {
   final TextEditingController searchController = TextEditingController();
   final List<Category> categories = [
     Category(
       title: 'Categoria 1',
-      imageAssetPath: 'assets/img/banner1.png', imageName: 'Tribal',
+      imageAssetPath: 'assets/img/banner1.png',
+      imageName: 'Tribal',
     ),
     Category(
       title: 'Categoria 2',
-      imageAssetPath: 'assets/img/banner2.png', imageName: 'Desenho',
+      imageAssetPath: 'assets/img/banner2.png',
+      imageName: 'Desenho',
     ),
     Category(
       title: 'Categoria 3',
-      imageAssetPath: 'assets/img/banner3.png', imageName: 'Realista',
+      imageAssetPath: 'assets/img/banner3.png',
+      imageName: 'Realista',
     ),
     Category(
       title: 'Categoria 4',
-      imageAssetPath: 'assets/img/Finder.png', imageName: 'Novidades',
+      imageAssetPath: 'assets/img/Finder.png',
+      imageName: 'Novidades',
     ),
   ];
 
@@ -173,7 +175,10 @@ class Category {
   final String imageAssetPath;
   final String imageName;
 
-  Category({required this.title, required this.imageAssetPath, required this.imageName});
+  Category(
+      {required this.title,
+      required this.imageAssetPath,
+      required this.imageName});
 }
 
 class CategoryItem extends StatelessWidget {
@@ -292,14 +297,14 @@ class _BannerCarouselState extends State<BannerCarousel> {
             },
             icon: timerActive
                 ? const Icon(
-              Icons.pause,
-              size: 30,
-              color: Colors.black26,
-            )
+                    Icons.pause,
+                    size: 30,
+                    color: Colors.black26,
+                  )
                 : const Icon(
-              Icons.play_arrow,
-              size: 30,
-            ),
+                    Icons.play_arrow,
+                    size: 30,
+                  ),
           ),
         ),
       ],

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tattoo_finder/login.dart';
+import 'cadastrocnpj.dart';
 
 class CadastroPage extends StatelessWidget {
   const CadastroPage({Key? key, required String title}) : super(key: key);
@@ -16,16 +17,15 @@ class CadastroPage extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Container(
+                height: 250,
                 color: Colors.black,
                 child: Center(
-                    //child: Image.asset(
-                    //"assets/img/Finder.png"
-                    //),
-                    ),
+                  child: Image.asset("assets/img/Finder.png"),
+                ),
               ),
             ),
             Expanded(
-              flex: 6,
+              flex: 2,
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -130,7 +130,7 @@ class CadastroPage extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 70, vertical: 9),
+                              horizontal: 70, vertical: 8),
                           child: const Text(
                             'Cadastre-se',
                             style: TextStyle(
@@ -138,6 +138,26 @@ class CadastroPage extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                             ),
                           ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => CadastroPageTattuador(
+                                  title: 'CadastroPageTattuador'),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'É um tatuador? Cadastre-se aqui.',
+                          style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500),
                         ),
                       ),
                     ],
