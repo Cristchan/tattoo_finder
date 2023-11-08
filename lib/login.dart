@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:tattoo_finder/cadastro.dart';
+import 'paginaPrincipal.dart';
+
 
 
 class MyHomePage extends StatefulWidget {
@@ -95,7 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         SizedBox(height: 18),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () { Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => paginaPrincipal(title: 'paginaPrincipal'),
+                            ),
+                          );},
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
