@@ -1,6 +1,8 @@
+//ignore_for_file: prefer_const_constructors
+
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:tattoo_finder/login.dart';
+
 
 class paginaPrincipal extends StatefulWidget {
   const paginaPrincipal({Key? key, required this.title}) : super(key: key);
